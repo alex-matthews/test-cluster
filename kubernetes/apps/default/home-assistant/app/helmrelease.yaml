@@ -34,6 +34,8 @@ spec:
       tag: 2023.10.1@sha256:13f3ccf4faa5a640053b10422d08d151fd00568e1e362007816a810660ab87e5
     env:
       TZ: ${TIMEZONE}
+      HASS_EXTERNAL_URL: https://hass.${SECRET_DOMAIN}
+      HASS_TRUSTED_PROXIES: ${CLUSTER_CIDR}
     service:
       main:
         ports:
