@@ -38,10 +38,10 @@ spec:
       HASS_TRUSTED_PROXIES: ${CLUSTER_CIDR}
     service:
       main:
-        type: LoadBalancer
-        annotations:
-          io.cilium/lb-ipam-ips: 192.168.1.252
-        externalTrafficPolicy: Cluster
+        # type: LoadBalancer
+        # annotations:
+        #   io.cilium/lb-ipam-ips: 192.168.1.252
+        # externalTrafficPolicy: Cluster
         ports:
           http:
             port: 8123
@@ -72,6 +72,13 @@ spec:
       runAsGroup: 568
       fsGroup: 568
       fsGroupChangePolicy: OnRootMismatch
+    # podAnnotations:
+    #   k8s.v1.cni.cncf.io/networks: |
+    #     [{
+    #       "name": "multus-iot",
+    #       "namespace": "networking",
+    #       "ips": ["192.168.1.252"]
+    #     }]
     volumeClaimTemplates:
       - name: config
         mountPath: /config
@@ -84,3 +91,4 @@ spec:
         memory: 100M
       limits:
         memory: 500M
+    hostNetwork: true
