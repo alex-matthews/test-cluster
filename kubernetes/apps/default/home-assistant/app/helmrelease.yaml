@@ -38,6 +38,10 @@ spec:
       HASS_TRUSTED_PROXIES: ${CLUSTER_CIDR}
     service:
       main:
+        type: LoadBalancer
+        annotations:
+          io.cilium/lb-ipam-ips: 192.168.1.252
+        externalTrafficPolicy: Cluster
         ports:
           http:
             port: 8123
