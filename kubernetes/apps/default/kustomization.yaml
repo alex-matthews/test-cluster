@@ -6,4 +6,3 @@ resources:
   - ./actual/ks.yaml
   - ./hajimari/ks.yaml
   - ./home-assistant/ks.yaml
-  # - ./discord-template-notifier/ks.yaml
