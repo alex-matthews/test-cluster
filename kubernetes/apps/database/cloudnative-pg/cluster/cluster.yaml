@@ -21,7 +21,7 @@ spec:
   # Note: Bootstrap is needed when recovering from an existing cnpg cluster
   # bootstrap:
   #   recovery:
-  #     source: &previousCluster cnpg-2
+  #     source: &previousCluster cnpg-v1
   postgresql:
     parameters:
       max_connections: "600"
@@ -36,14 +36,14 @@ spec:
         maxParallel: 8
       destinationPath: s3://cnpg/
       endpointURL: https://${SECRET_CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com
-      serverName: &currentCluster cnpg-2
+      serverName: &currentCluster cnpg-v1
       s3Credentials:
         accessKeyId:
           name: cloudnative-pg-secret
-          key: AWS_ACCESS_KEY_ID
+          key: aws-access-key-id
         secretAccessKey:
           name: cloudnative-pg-secret
-          key: AWS_SECRET_ACCESS_KEY
+          key: aws-secret-access-key
   # Note: externalClusters is needed when recovering from an existing cnpg cluster
   # externalClusters:
   #   - name: *previousCluster
@@ -56,7 +56,7 @@ spec:
   #       s3Credentials:
   #         accessKeyId:
   #           name: cloudnative-pg-secret
-  #           key: AWS_ACCESS_KEY_ID
+  #           key: aws-access-key-id
   #         secretAccessKey:
   #           name: cloudnative-pg-secret
-  #           key: AWS_SECRET_ACCESS_KEY
+  #           key: aws-secret-access-key
