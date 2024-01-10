@@ -74,7 +74,7 @@
         - name: Network Configuration | Add custom /etc/resolv.conf
           ansible.builtin.copy:
             attributes: +i
-            mode: '0644'
+            mode: "0644"
             dest: /etc/resolv.conf
             content: |
               search .
