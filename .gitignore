@@ -11,4 +11,4 @@ kubeconfig
 # Ansible
 .venv*
 # Taskfile
-.tasks
+.task
