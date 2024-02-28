@@ -88,6 +88,7 @@ spec:
             url: http://kube-prometheus-stack-prometheus.observability.svc.cluster.local:9090
             jsonData:
               prometheusType: Prometheus
+              timeInterval: 1m
             isDefault: true
     dashboards:
       default:

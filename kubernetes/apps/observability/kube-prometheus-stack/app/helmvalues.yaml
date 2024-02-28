@@ -109,6 +109,7 @@ data:
         podMonitorSelectorNilUsesHelmValues: false
         probeSelectorNilUsesHelmValues: false
         scrapeConfigSelectorNilUsesHelmValues: false
+        scrapeInterval: 1m # Must match interval in Grafana Helm chart
         enableAdminAPI: true
         walCompression: true
         retentionSize: 8GB
