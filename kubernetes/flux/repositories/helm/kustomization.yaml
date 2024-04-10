@@ -9,7 +9,6 @@ resources:
   - ./cilium.yaml
   - ./cloudnative-pg.yaml
   - ./coredns.yaml
-  - ./democratic-csi.yaml
   - ./descheduler.yaml
   - ./external-dns.yaml
   - ./external-secrets.yaml
@@ -21,6 +20,7 @@ resources:
   - ./kubernetes-dashboard.yaml
   - ./longhorn.yaml
   - ./metrics-server.yaml
+  - ./openebs.yaml
   - ./piraeus.yaml
   - ./prometheus-community.yaml
   - ./stakater.yaml
